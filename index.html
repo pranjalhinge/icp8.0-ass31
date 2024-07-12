@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Preview Design</title>
+    <style>
+        .main-product-img{
+            width: 500px;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px 10px gainsboro;
+            margin: 20px auto;
+            display: block;
+        }
+        .product-img{
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px 10px 10px 10px;
+            cursor:pointer;
+            padding: 5px;
+        }
+        .product-img-container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <img src=""
+    <img src="Acer1.webp" class="main-product-img" id="main-product-img"/>
+
+    <div class="product-img-container">
+        <img src="Acer1.webp" class="product-img" onclick="changeImg(1)"/>
+        <img src="Acer2.webp" class="product-img" onclick="changeImg(2)"/>
+        <img src="Acer3.jpg" class="product-img" onclick="changeImg(3)"/>
+        <img src="Acer4.jpg" class="product-img" onclick="changeImg(4)"/>
+
+    </div>
+
+    <script>
+        function changeImg(num){
+            const mainImg = document.getElementById("main-product-img");
+            if(num==1){
+                mainImg.src = "Acer1.webp";
+            }
+            else if(num==2){
+                mainImg.src = "Acer2.webp";
+            }
+            else if(num==3){
+                mainImg.src = "Acer3.jpg";
+            }
+            else if(num==4){
+                mainImg.src = "Acer4.jpg";
+            }
+
+        }
+    </script>
     
 </body>
 </html>
